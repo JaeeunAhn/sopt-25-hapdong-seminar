@@ -18,6 +18,8 @@
 		F42AA9F9237FDB7B005B26B8 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42AA9F8237FDB7B005B26B8 /* UIImageView+Extensions.swift */; };
 		F42AA9FB237FDBD2005B26B8 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42AA9FA237FDBD2005B26B8 /* UIView+Extensions.swift */; };
 		F42AA9FD237FDBF5005B26B8 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42AA9FC237FDBF5005B26B8 /* UIViewController+Extensions.swift */; };
+		F42AAA06238043B2005B26B8 /* main_jaeeun.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F42AAA05238043B2005B26B8 /* main_jaeeun.storyboard */; };
+		F42AAA08238043DC005B26B8 /* myPage_jaeeun.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F42AAA07238043DC005B26B8 /* myPage_jaeeun.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		F42AA9F8237FDB7B005B26B8 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		F42AA9FA237FDBD2005B26B8 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		F42AA9FC237FDBF5005B26B8 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		F42AAA05238043B2005B26B8 /* main_jaeeun.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = main_jaeeun.storyboard; sourceTree = "<group>"; };
+		F42AAA07238043DC005B26B8 /* myPage_jaeeun.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = myPage_jaeeun.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +60,6 @@
 				8CEF24355941B7AAA8073A8C /* Pods-ddareunge_iOS.debug.xcconfig */,
 				114BD58E2626A27E2D39FAA3 /* Pods-ddareunge_iOS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -119,6 +122,9 @@
 		F42AA9F3237FDAB6005B26B8 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				F42AAA0423804373005B26B8 /* jaeeun */,
+				F42AAA032380436C005B26B8 /* dongmin */,
+				F42AAA0223804362005B26B8 /* hyunji */,
 				F42AA9E8237FDA54005B26B8 /* LaunchScreen.storyboard */,
 				F42AA9E3237FDA50005B26B8 /* Main.storyboard */,
 			);
@@ -142,6 +148,29 @@
 				F42AA9FC237FDBF5005B26B8 /* UIViewController+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F42AAA0223804362005B26B8 /* hyunji */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = hyunji;
+			sourceTree = "<group>";
+		};
+		F42AAA032380436C005B26B8 /* dongmin */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = dongmin;
+			sourceTree = "<group>";
+		};
+		F42AAA0423804373005B26B8 /* jaeeun */ = {
+			isa = PBXGroup;
+			children = (
+				F42AAA05238043B2005B26B8 /* main_jaeeun.storyboard */,
+				F42AAA07238043DC005B26B8 /* myPage_jaeeun.storyboard */,
+			);
+			path = jaeeun;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +233,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F42AA9EA237FDA54005B26B8 /* LaunchScreen.storyboard in Resources */,
+				F42AAA06238043B2005B26B8 /* main_jaeeun.storyboard in Resources */,
+				F42AAA08238043DC005B26B8 /* myPage_jaeeun.storyboard in Resources */,
 				F42AA9E7237FDA54005B26B8 /* Assets.xcassets in Resources */,
 				F42AA9E5237FDA50005B26B8 /* Main.storyboard in Resources */,
 			);

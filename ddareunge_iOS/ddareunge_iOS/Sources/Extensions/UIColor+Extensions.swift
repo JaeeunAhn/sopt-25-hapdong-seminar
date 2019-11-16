@@ -11,3 +11,35 @@ import UIKit
 
 // color extension
 // 제플린 style guide에서 따오기.
+
+extension UIColor {
+
+  @nonobjc class var aquaMarine: UIColor {
+    return UIColor(red: 40.0 / 255.0, green: 239.0 / 255.0, blue: 199.0 / 255.0, alpha: 1.0)
+  }
+
+  @nonobjc class var brownishGrey: UIColor {
+    return UIColor(white: 112.0 / 255.0, alpha: 1.0)
+  }
+
+  @nonobjc class var black1: UIColor {
+    return UIColor(white: 0.0, alpha: 0.16)
+  }
+
+  @nonobjc class var navy: UIColor {
+    return UIColor(red: 0.0, green: 27.0 / 255.0, blue: 49.0 / 255.0, alpha: 1.0)
+  }
+
+  @nonobjc class var lightishRed: UIColor {
+    return UIColor(red: 241.0 / 255.0, green: 66.0 / 255.0, blue: 79.0 / 255.0, alpha: 1.0)
+  }
+
+  @nonobjc class var paleTurquoise: UIColor {
+    return UIColor(red: 174.0 / 255.0, green: 244.0 / 255.0, blue: 223.0 / 255.0, alpha: 1.0)
+  }
+
+  @nonobjc class var lightGreenishBlue: UIColor {
+    return UIColor(red: 114.0 / 255.0, green: 235.0 / 255.0, blue: 200.0 / 255.0, alpha: 1.0)
+  }
+
+}
