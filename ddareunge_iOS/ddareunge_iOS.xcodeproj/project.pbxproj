@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A9AFB871FF7A175829E88E4D /* Pods_ddareunge_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5DB45485F83B4771D72B808 /* Pods_ddareunge_iOS.framework */; };
 		F42AA9DE237FDA50005B26B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42AA9DD237FDA50005B26B8 /* AppDelegate.swift */; };
 		F42AA9E0237FDA50005B26B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42AA9DF237FDA50005B26B8 /* SceneDelegate.swift */; };
 		F42AA9E2237FDA50005B26B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42AA9E1237FDA50005B26B8 /* ViewController.swift */; };
@@ -20,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		114BD58E2626A27E2D39FAA3 /* Pods-ddareunge_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ddareunge_iOS.release.xcconfig"; path = "Target Support Files/Pods-ddareunge_iOS/Pods-ddareunge_iOS.release.xcconfig"; sourceTree = "<group>"; };
+		8CEF24355941B7AAA8073A8C /* Pods-ddareunge_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ddareunge_iOS.debug.xcconfig"; path = "Target Support Files/Pods-ddareunge_iOS/Pods-ddareunge_iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		C5DB45485F83B4771D72B808 /* Pods_ddareunge_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ddareunge_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F42AA9DA237FDA50005B26B8 /* ddareunge_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ddareunge_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F42AA9DD237FDA50005B26B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F42AA9DF237FDA50005B26B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,17 +43,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9AFB871FF7A175829E88E4D /* Pods_ddareunge_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		60D68A2957EF7DBA753B7DFA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8CEF24355941B7AAA8073A8C /* Pods-ddareunge_iOS.debug.xcconfig */,
+				114BD58E2626A27E2D39FAA3 /* Pods-ddareunge_iOS.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		718239C6511FF936B371CEAE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C5DB45485F83B4771D72B808 /* Pods_ddareunge_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F42AA9D1237FDA50005B26B8 = {
 			isa = PBXGroup;
 			children = (
 				F42AA9DC237FDA50005B26B8 /* ddareunge_iOS */,
 				F42AA9DB237FDA50005B26B8 /* Products */,
+				60D68A2957EF7DBA753B7DFA /* Pods */,
+				718239C6511FF936B371CEAE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,6 +151,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F42AA9EE237FDA54005B26B8 /* Build configuration list for PBXNativeTarget "ddareunge_iOS" */;
 			buildPhases = (
+				036ECC661EDCC011711DA7E3 /* [CP] Check Pods Manifest.lock */,
 				F42AA9D6237FDA50005B26B8 /* Sources */,
 				F42AA9D7237FDA50005B26B8 /* Frameworks */,
 				F42AA9D8237FDA50005B26B8 /* Resources */,
@@ -184,6 +210,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		036ECC661EDCC011711DA7E3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ddareunge_iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F42AA9D6237FDA50005B26B8 /* Sources */ = {
@@ -338,6 +389,7 @@
 		};
 		F42AA9EF237FDA54005B26B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CEF24355941B7AAA8073A8C /* Pods-ddareunge_iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -356,6 +408,7 @@
 		};
 		F42AA9F0237FDA54005B26B8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 114BD58E2626A27E2D39FAA3 /* Pods-ddareunge_iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
