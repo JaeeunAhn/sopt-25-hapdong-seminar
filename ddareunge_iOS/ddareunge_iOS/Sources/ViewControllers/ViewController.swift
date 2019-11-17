@@ -9,40 +9,37 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        if let navigationBar = self.navigationController?.navigationBar {
-            let gradient = CAGradientLayer()
-            var bounds = navigationBar.bounds
-            bounds.size.height += UIApplication.shared.statusBarFrame.size.height
-            gradient.frame = bounds
-            gradient.colors = [UIColor.white.cgColor, UIColor.white.cgColor]
-            gradient.startPoint = CGPoint(x: 0, y: 0)
-            gradient.endPoint = CGPoint(x: 0, y: 3)
-
-            if let image = getImageFrom(gradientLayer: gradient) {
-                navigationBar.setBackgroundImage(image, for: UIBarMetrics.default)
-            }
-        }
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = false
-        self.navigationController?.navigationBar.barTintColor = UIColor.white
+        setNavigationBarClear()
+        setNaviBarGradient()
     }
     
-    private func getImageFrom(gradientLayer: CAGradientLayer) -> UIImage? {
+    private func setNaviBarGradient() {
+        guard let navigationBar = self.navigationController?.navigationBar else { return }
+        let gradient = CAGradientLayer()
+        var gradientFrame = navigationBar.bounds
+        guard let statusBarHeight = getCurrentWindow()?.windowScene?.statusBarManager?.statusBarFrame.height else { return }
+        gradientFrame.size.height += statusBarHeight
+        gradient.frame = gradientFrame
+        gradient.colors = [UIColor.white.cgColor, UIColor.white.withAlphaComponent(0).cgColor]
+        gradient.startPoint = CGPoint(x: 0, y: 0)
+        gradient.endPoint = CGPoint(x: 0, y: 7)
+        
+        guard let image = getImageFrom(gradient) else { return }
+        navigationBar.setBackgroundImage(image, for: .default)
+    }
+    
+    private func getImageFrom(_ gradientLayer: CAGradientLayer) -> UIImage? {
         var gradientImage: UIImage?
         UIGraphicsBeginImageContext(gradientLayer.frame.size)
-        if let context = UIGraphicsGetCurrentContext() {
-            gradientLayer.render(in: context)
-            gradientImage = UIGraphicsGetImageFromCurrentImageContext()?.resizableImage(withCapInsets: UIEdgeInsets.zero, resizingMode: .stretch)
-        }
+        guard let context = UIGraphicsGetCurrentContext() else { return gradientImage }
+        gradientLayer.render(in: context)
+        gradientImage = UIGraphicsGetImageFromCurrentImageContext()?.resizableImage(withCapInsets: UIEdgeInsets.zero, resizingMode: .stretch)
         UIGraphicsEndImageContext()
         return gradientImage
     }
-
-
 }
 

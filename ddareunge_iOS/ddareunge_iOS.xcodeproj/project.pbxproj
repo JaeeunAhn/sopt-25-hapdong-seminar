@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D8506D22381B39D00A5FB2A /* UITabbar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8506D12381B39D00A5FB2A /* UITabbar+Extension.swift */; };
 		A9AFB871FF7A175829E88E4D /* Pods_ddareunge_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5DB45485F83B4771D72B808 /* Pods_ddareunge_iOS.framework */; };
 		F42AA9DE237FDA50005B26B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42AA9DD237FDA50005B26B8 /* AppDelegate.swift */; };
 		F42AA9E0237FDA50005B26B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42AA9DF237FDA50005B26B8 /* SceneDelegate.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		114BD58E2626A27E2D39FAA3 /* Pods-ddareunge_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ddareunge_iOS.release.xcconfig"; path = "Target Support Files/Pods-ddareunge_iOS/Pods-ddareunge_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		8CEF24355941B7AAA8073A8C /* Pods-ddareunge_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ddareunge_iOS.debug.xcconfig"; path = "Target Support Files/Pods-ddareunge_iOS/Pods-ddareunge_iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		9D8506D12381B39D00A5FB2A /* UITabbar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabbar+Extension.swift"; sourceTree = "<group>"; };
 		C5DB45485F83B4771D72B808 /* Pods_ddareunge_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ddareunge_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F42AA9DA237FDA50005B26B8 /* ddareunge_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ddareunge_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F42AA9DD237FDA50005B26B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,7 +58,6 @@
 				8CEF24355941B7AAA8073A8C /* Pods-ddareunge_iOS.debug.xcconfig */,
 				114BD58E2626A27E2D39FAA3 /* Pods-ddareunge_iOS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -140,6 +141,7 @@
 				F42AA9F8237FDB7B005B26B8 /* UIImageView+Extensions.swift */,
 				F42AA9FA237FDBD2005B26B8 /* UIView+Extensions.swift */,
 				F42AA9FC237FDBF5005B26B8 /* UIViewController+Extensions.swift */,
+				9D8506D12381B39D00A5FB2A /* UITabbar+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -246,6 +248,7 @@
 				F42AA9E2237FDA50005B26B8 /* ViewController.swift in Sources */,
 				F42AA9FD237FDBF5005B26B8 /* UIViewController+Extensions.swift in Sources */,
 				F42AA9DE237FDA50005B26B8 /* AppDelegate.swift in Sources */,
+				9D8506D22381B39D00A5FB2A /* UITabbar+Extension.swift in Sources */,
 				F42AA9E0237FDA50005B26B8 /* SceneDelegate.swift in Sources */,
 				F42AA9F7237FDB50005B26B8 /* UIColor+Extensions.swift in Sources */,
 			);
@@ -323,7 +326,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -377,7 +380,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -395,6 +398,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 25UTG6U2R6;
 				INFOPLIST_FILE = ddareunge_iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -414,6 +418,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 25UTG6U2R6;
 				INFOPLIST_FILE = ddareunge_iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

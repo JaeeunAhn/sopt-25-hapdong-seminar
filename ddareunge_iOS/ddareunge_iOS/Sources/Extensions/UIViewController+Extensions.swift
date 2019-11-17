@@ -91,4 +91,10 @@ extension UIViewController {
         return value_
     }//func gfno
     
+    
+    // [UIWindow] 중 현재 화면의 window인지 확인하여 추출
+    func getCurrentWindow() -> UIWindow? {
+        let window = UIApplication.shared.windows.filter { $0.isKeyWindow }.first
+        return window
+    }
 }
