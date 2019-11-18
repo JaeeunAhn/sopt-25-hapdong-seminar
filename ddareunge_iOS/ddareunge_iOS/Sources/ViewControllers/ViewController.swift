@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-//        setNaviTitleView()
+        setNaviTitleView()
         setNavigationBarClear()
         setNaviBarGradient()
     }
@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     private func setNaviTitleView() {
         guard let titleImage = UIImage(named: "logo") else { return }
         let titleImageView = UIImageView(image: titleImage)
-//        titleImageView.contentMode = .scaleAspectFill
+        titleImageView.contentMode = .scaleAspectFill
         self.navigationItem.titleView = titleImageView
     }
     

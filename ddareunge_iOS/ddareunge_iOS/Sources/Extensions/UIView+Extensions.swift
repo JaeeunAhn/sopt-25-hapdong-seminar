@@ -22,7 +22,7 @@ extension UIView {
             self.layer.cornerRadius = self.layer.frame.height / 2
         }
         
-        self.layer.masksToBounds = true
+        self.clipsToBounds = true
     }
     
     // Set UIView's Shadow
@@ -58,6 +58,14 @@ extension UIView {
             // borderWidth 변수가 nil 일 경우의 default
             self.layer.borderWidth = 1.0
         }
+    }
+    
+    // Set UIView's Shadow
+    func makeShadow() {
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOffset = .zero
+        self.layer.shadowOpacity = 0.16
+        self.layer.shadowRadius = 7
     }
 }
 

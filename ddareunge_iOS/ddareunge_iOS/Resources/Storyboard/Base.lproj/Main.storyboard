@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vad-xH-wwM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SRl-3x-ZRM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--홈-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ddareunge_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -40,12 +40,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="홈" image="home" id="brP-L3-wDh"/>
-                    <navigationItem key="navigationItem" id="fmD-Ti-VA4"/>
+                    <navigationItem key="navigationItem" id="fmD-Ti-VA4">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="icEng" id="2N4-Xz-WMd">
+                            <color key="tintColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="icMenu" id="0rr-oc-deJ">
+                            <color key="tintColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1957.9710144927537" y="129.91071428571428"/>
+            <point key="canvasLocation" x="2868.115942028986" y="129.91071428571428"/>
         </scene>
         <!--알림-->
         <scene sceneID="tZh-KM-kY0">
@@ -79,7 +85,7 @@
             </objects>
             <point key="canvasLocation" x="1048" y="867"/>
         </scene>
-        <!--나의공간-->
+        <!--My Space View Controller-->
         <scene sceneID="DNk-gh-8vQ">
             <objects>
                 <viewController id="OkH-AV-Dv8" customClass="MySpaceViewController" customModule="ddareunge_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -87,6 +93,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="88S-7v-1CU">
+                                <rect key="frame" x="0.0" y="242" width="414" height="571"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgBackground" translatesAutoresizingMaskIntoConstraints="NO" id="22w-TK-aK8">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="571"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="22w-TK-aK8" firstAttribute="top" secondItem="88S-7v-1CU" secondAttribute="top" id="9ai-mV-Odf"/>
+                                    <constraint firstAttribute="bottom" secondItem="22w-TK-aK8" secondAttribute="bottom" id="9pL-Gd-TfN"/>
+                                    <constraint firstItem="22w-TK-aK8" firstAttribute="leading" secondItem="88S-7v-1CU" secondAttribute="leading" id="Mqa-1O-U9T"/>
+                                    <constraint firstAttribute="trailing" secondItem="22w-TK-aK8" secondAttribute="trailing" id="t81-fF-be3"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qQj-TD-9tm">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="273"/>
                                 <subviews>
@@ -156,43 +177,62 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="23E-eO-LOI" customClass="CustomButton" customModule="ddareunge_iOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="366" height="63"/>
-                                        <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="63" id="Udg-3Z-5S8"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XtS-zE-9ft" customClass="CustomButton" customModule="ddareunge_iOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="88" width="366" height="63"/>
-                                        <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="63" id="Fj1-Ks-yRP"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hzH-00-54K" customClass="CustomButton" customModule="ddareunge_iOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="176" width="366" height="63"/>
-                                        <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="63" id="XRa-Ol-mp7"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서울 따릉이 안내센터 1599 - 0120" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gzm-R7-r8V">
+                                <rect key="frame" x="121" y="798.5" width="172.5" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="eTd-9N-9Oh" firstAttribute="trailing" secondItem="dZn-rh-YPR" secondAttribute="trailing" constant="24" id="0ZX-yB-tfz"/>
                             <constraint firstItem="dZn-rh-YPR" firstAttribute="leading" secondItem="eTd-9N-9Oh" secondAttribute="leading" constant="24" id="Ghe-RQ-ECG"/>
+                            <constraint firstItem="88S-7v-1CU" firstAttribute="top" secondItem="aMe-rK-sSg" secondAttribute="top" constant="242" id="H44-jX-R5j"/>
+                            <constraint firstItem="88S-7v-1CU" firstAttribute="leading" secondItem="eTd-9N-9Oh" secondAttribute="leading" id="NAK-UR-YwM"/>
                             <constraint firstItem="4d3-LC-naF" firstAttribute="leading" secondItem="eTd-9N-9Oh" secondAttribute="leading" id="Nnn-37-qyw"/>
+                            <constraint firstItem="Gzm-R7-r8V" firstAttribute="centerX" secondItem="eTd-9N-9Oh" secondAttribute="centerX" id="OYh-Cf-L6J"/>
                             <constraint firstItem="dZn-rh-YPR" firstAttribute="top" secondItem="4d3-LC-naF" secondAttribute="bottom" constant="29" id="V5e-tS-FNX"/>
                             <constraint firstItem="qQj-TD-9tm" firstAttribute="leading" secondItem="eTd-9N-9Oh" secondAttribute="leading" id="bBY-hc-Sj5"/>
                             <constraint firstItem="4d3-LC-naF" firstAttribute="trailing" secondItem="eTd-9N-9Oh" secondAttribute="trailing" id="cY0-Fz-bci"/>
                             <constraint firstItem="4d3-LC-naF" firstAttribute="top" secondItem="qQj-TD-9tm" secondAttribute="bottom" constant="38" id="gVM-bS-g2Y"/>
+                            <constraint firstItem="88S-7v-1CU" firstAttribute="trailing" secondItem="eTd-9N-9Oh" secondAttribute="trailing" id="hG4-d6-9xZ"/>
+                            <constraint firstItem="eTd-9N-9Oh" firstAttribute="bottom" secondItem="88S-7v-1CU" secondAttribute="bottom" id="ruS-dW-z58"/>
                             <constraint firstItem="qQj-TD-9tm" firstAttribute="trailing" secondItem="eTd-9N-9Oh" secondAttribute="trailing" id="sU0-V8-L4N"/>
+                            <constraint firstItem="eTd-9N-9Oh" firstAttribute="bottom" secondItem="Gzm-R7-r8V" secondAttribute="bottom" id="tCv-a5-nb8"/>
                             <constraint firstItem="qQj-TD-9tm" firstAttribute="top" secondItem="aMe-rK-sSg" secondAttribute="top" id="yxH-Js-36z"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eTd-9N-9Oh"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="나의공간" image="path" id="Egv-eV-liq"/>
+                    <navigationItem key="navigationItem" id="Lgx-zN-p0y">
+                        <barButtonItem key="leftBarButtonItem" image="chevron.left" catalog="system" id="5WP-4t-ifN">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="backScreen:" destination="OkH-AV-Dv8" id="YUU-Qi-3o6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="payManageButton" destination="XtS-zE-9ft" id="d6e-DL-LQv"/>
                         <outlet property="personalInformManageButton" destination="23E-eO-LOI" id="qeI-ER-NUD"/>
@@ -202,29 +242,14 @@
                         <outlet property="ticketButton" destination="LyC-IC-ztq" id="gdz-e6-qLe"/>
                         <outlet property="ticketView" destination="4d3-LC-naF" id="Jfn-ar-Fb3"/>
                         <outlet property="useInformManageButton" destination="hzH-00-54K" id="Yhw-sf-aEW"/>
+                        <outletCollection property="customButtons" destination="23E-eO-LOI" collectionClass="NSMutableArray" id="u22-TF-DOW"/>
+                        <outletCollection property="customButtons" destination="XtS-zE-9ft" collectionClass="NSMutableArray" id="4Fo-2G-faQ"/>
+                        <outletCollection property="customButtons" destination="hzH-00-54K" collectionClass="NSMutableArray" id="9z8-Vd-lda"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4fl-8x-1sb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1957.9710144927537" y="852.45535714285711"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="dtl-Lx-eEj">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vad-xH-wwM" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HxL-PV-zmU">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="SRl-3x-ZRM" kind="relationship" relationship="rootViewController" id="AT7-Dw-2YS"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="s4G-Lg-NLj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+            <point key="canvasLocation" x="2868.115942028986" y="852.45535714285711"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="phn-vO-3M9">
@@ -232,7 +257,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="SRl-3x-ZRM" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="hhW-u1-mvW"/>
-                    <tabBar key="tabBar" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" backgroundImage="789" id="Sbj-5Q-L3P">
+                    <tabBar key="tabBar" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" backgroundImage="789" id="Sbj-5Q-L3P">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -240,8 +265,8 @@
                         <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="B2d-b5-ZQE"/>
-                        <segue destination="OkH-AV-Dv8" kind="relationship" relationship="viewControllers" id="kXd-hI-nlX"/>
+                        <segue destination="EsC-78-pqG" kind="relationship" relationship="viewControllers" id="B2d-b5-ZQE"/>
+                        <segue destination="aXh-lX-Diz" kind="relationship" relationship="viewControllers" id="kXd-hI-nlX"/>
                         <segue destination="GWP-WM-oC4" kind="relationship" relationship="viewControllers" id="YL8-ZI-44W"/>
                         <segue destination="UBk-7e-uv8" kind="relationship" relationship="viewControllers" id="xZp-KW-0tG"/>
                     </connections>
@@ -250,13 +275,55 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="129.91071428571428"/>
         </scene>
+        <!--나의공간-->
+        <scene sceneID="Fm1-Lt-o7j">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aXh-lX-Diz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="나의공간" image="path" id="Egv-eV-liq"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CWl-F2-RHO">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OkH-AV-Dv8" kind="relationship" relationship="rootViewController" id="M95-kc-xgV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A5m-kx-QWL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1957.9710144927537" y="852.45535714285711"/>
+        </scene>
+        <!--홈-->
+        <scene sceneID="0UZ-hy-Fvg">
+            <objects>
+                <navigationController storyboardIdentifier="mainViewController" automaticallyAdjustsScrollViewInsets="NO" id="EsC-78-pqG" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="홈" image="home" id="brP-L3-wDh"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="C0X-J0-hR6">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8u2-6e-E7y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bbh-Sp-cES" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1957.9710144927537" y="129.91071428571428"/>
+        </scene>
     </scenes>
     <resources>
         <image name="789" width="375.5" height="96"/>
         <image name="799" width="22" height="22"/>
+        <image name="chevron.left" catalog="system" width="48" height="64"/>
         <image name="content" width="375" height="812"/>
         <image name="home" width="21" height="21"/>
         <image name="icBell" width="20" height="24"/>
+        <image name="icEng" width="48" height="49"/>
+        <image name="icMenu" width="24" height="24"/>
+        <image name="imgBackground" width="380" height="533"/>
         <image name="imgProfile" width="376" height="274"/>
         <image name="path" width="20" height="20"/>
     </resources>

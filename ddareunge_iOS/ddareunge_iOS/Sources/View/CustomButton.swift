@@ -10,26 +10,30 @@ import UIKit
 
 class CustomButton: UIView {
     
-    private var view: UIView?
+    private var customView: UIView?
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var arrowImage: UIImageView!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        view = Bundle.main.loadNibNamed("CustomButton", owner: self, options: nil)?.first as? UIView
+        guard let view = Bundle.main.loadNibNamed("CustomButton", owner: self, options: nil)?.first as? UIView else { return }
+        customView = view
         initialView()
     }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+        guard let view = Bundle.main.loadNibNamed("CustomButton", owner: self, options: nil)?.first as? UIView else { return }
+        customView = view
         initialView()
     }
     
     private func initialView() {
-        guard let view = self.view else { return }
+        guard let view = customView else { return }
         view.frame = self.bounds
+        view.backgroundColor = .white
+        view.makeRounded(cornerRadius: view.frame.width / 20)
         self.addSubview(view)
-        makeRounded(cornerRadius: view.frame.width / 20)
     }
     
     func setDescriptionLabel(_ description: String) {
@@ -39,14 +43,12 @@ class CustomButton: UIView {
 
 extension CustomButton {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guard let view = self.view else { return }
-        view.backgroundColor = .paleTurquoise
+        self.customView?.backgroundColor = .paleTurquoise
         arrowImage.tintColor = .white
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guard let view = self.view else { return }
-        view.backgroundColor = .white
+        self.customView?.backgroundColor = .white
         arrowImage.tintColor = UIColor(red: 224/255, green: 224/255, blue: 224/255, alpha: 1.0)
     }
 }

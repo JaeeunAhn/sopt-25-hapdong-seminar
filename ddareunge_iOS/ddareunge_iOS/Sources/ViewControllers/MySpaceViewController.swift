@@ -20,12 +20,13 @@ class MySpaceViewController: UIViewController {
     @IBOutlet weak var personalInformManageButton: CustomButton!
     @IBOutlet weak var payManageButton: CustomButton!
     @IBOutlet weak var useInformManageButton: CustomButton!
+    @IBOutlet var customButtons: [CustomButton]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.tabBarController?.tabBar.isHidden = true
-        self.navigationController?.navigationBar.isHidden = true
+        setNavigationBarClear()
         setProfileImage()
         setProfileLabel(id: "SOPT5 :)")
         setTicketView()
@@ -47,8 +48,8 @@ class MySpaceViewController: UIViewController {
     }
     
     private func setTicketView() {
+        ticketButton.makeShadow()
         ticketButton.layer.cornerRadius = ticketButton.frame.width / 20
-        ticketButton.clipsToBounds = true
         ticketButton.backgroundColor = .paleTurquoise
         ticketButton.layer.borderColor = UIColor.lightGreenishBlue.cgColor
         ticketButton.layer.borderWidth = 3
@@ -58,5 +59,16 @@ class MySpaceViewController: UIViewController {
         personalInformManageButton.setDescriptionLabel("회원정보 관리")
         payManageButton.setDescriptionLabel("결제관리")
         useInformManageButton.setDescriptionLabel("이용정보 관리")
+        setCustomButtonsShadow()
+    }
+    
+    private func setCustomButtonsShadow() {
+        for customButton in customButtons {
+            customButton.makeShadow()
+            customButton.layer.cornerRadius = customButton.frame.width / 20
+        }
+    }
+    
+    @IBAction func backScreen(_ sender: Any) {
     }
 }
