@@ -14,7 +14,12 @@ class MySpaceViewController: UIViewController {
     @IBOutlet weak var profileButton: UIButton!
     @IBOutlet weak var profileLabel: UILabel!
     
+    @IBOutlet weak var ticketView: UIView!
     @IBOutlet weak var ticketButton: UIButton!
+    
+    @IBOutlet weak var personalInformManageButton: CustomButton!
+    @IBOutlet weak var payManageButton: CustomButton!
+    @IBOutlet weak var useInformManageButton: CustomButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +29,7 @@ class MySpaceViewController: UIViewController {
         setProfileImage()
         setProfileLabel(id: "SOPT5 :)")
         setTicketView()
+        setCustomButtons()
     }
     
     private func setProfileImage() {
@@ -46,5 +52,11 @@ class MySpaceViewController: UIViewController {
         ticketButton.backgroundColor = .paleTurquoise
         ticketButton.layer.borderColor = UIColor.lightGreenishBlue.cgColor
         ticketButton.layer.borderWidth = 3
+    }
+    
+    private func setCustomButtons() {
+        personalInformManageButton.setDescriptionLabel("회원정보 관리")
+        payManageButton.setDescriptionLabel("결제관리")
+        useInformManageButton.setDescriptionLabel("이용정보 관리")
     }
 }

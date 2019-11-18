@@ -102,7 +102,7 @@
                                         <state key="normal" title="Button"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7eI-er-W0l">
-                                        <rect key="frame" x="186" y="271" width="42" height="21"/>
+                                        <rect key="frame" x="186" y="271" width="42" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -125,7 +125,7 @@
                                 <rect key="frame" x="0.0" y="311" width="414" height="98"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이용권 현황" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v8m-Ug-Hut">
-                                        <rect key="frame" x="77" y="8" width="56" height="15"/>
+                                        <rect key="frame" x="77" y="8.5" width="55.5" height="14.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -136,7 +136,7 @@
                                             <constraint firstAttribute="height" constant="56" id="VH9-lW-za6"/>
                                             <constraint firstAttribute="width" constant="260" id="jc8-Uz-bmv"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="일일 이용권 (2시간)">
                                             <color key="titleColor" red="0.10980392156862745" green="0.10980392156862745" blue="0.12941176470588234" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                                         </state>
@@ -151,10 +151,39 @@
                                     <constraint firstAttribute="bottom" secondItem="LyC-IC-ztq" secondAttribute="bottom" constant="12" id="YaJ-rW-66p"/>
                                 </constraints>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="dZn-rh-YPR">
+                                <rect key="frame" x="24" y="438" width="366" height="239"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="23E-eO-LOI" customClass="CustomButton" customModule="ddareunge_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="366" height="63"/>
+                                        <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="63" id="Udg-3Z-5S8"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XtS-zE-9ft" customClass="CustomButton" customModule="ddareunge_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="88" width="366" height="63"/>
+                                        <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="63" id="Fj1-Ks-yRP"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hzH-00-54K" customClass="CustomButton" customModule="ddareunge_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="176" width="366" height="63"/>
+                                        <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="63" id="XRa-Ol-mp7"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="eTd-9N-9Oh" firstAttribute="trailing" secondItem="dZn-rh-YPR" secondAttribute="trailing" constant="24" id="0ZX-yB-tfz"/>
+                            <constraint firstItem="dZn-rh-YPR" firstAttribute="leading" secondItem="eTd-9N-9Oh" secondAttribute="leading" constant="24" id="Ghe-RQ-ECG"/>
                             <constraint firstItem="4d3-LC-naF" firstAttribute="leading" secondItem="eTd-9N-9Oh" secondAttribute="leading" id="Nnn-37-qyw"/>
+                            <constraint firstItem="dZn-rh-YPR" firstAttribute="top" secondItem="4d3-LC-naF" secondAttribute="bottom" constant="29" id="V5e-tS-FNX"/>
                             <constraint firstItem="qQj-TD-9tm" firstAttribute="leading" secondItem="eTd-9N-9Oh" secondAttribute="leading" id="bBY-hc-Sj5"/>
                             <constraint firstItem="4d3-LC-naF" firstAttribute="trailing" secondItem="eTd-9N-9Oh" secondAttribute="trailing" id="cY0-Fz-bci"/>
                             <constraint firstItem="4d3-LC-naF" firstAttribute="top" secondItem="qQj-TD-9tm" secondAttribute="bottom" constant="38" id="gVM-bS-g2Y"/>
@@ -165,10 +194,14 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="나의공간" image="path" id="Egv-eV-liq"/>
                     <connections>
+                        <outlet property="payManageButton" destination="XtS-zE-9ft" id="d6e-DL-LQv"/>
+                        <outlet property="personalInformManageButton" destination="23E-eO-LOI" id="qeI-ER-NUD"/>
                         <outlet property="profileButton" destination="k8j-aT-z9W" id="lZx-oO-ntc"/>
                         <outlet property="profileLabel" destination="7eI-er-W0l" id="wxa-O8-1N0"/>
                         <outlet property="profileView" destination="qQj-TD-9tm" id="ekr-vj-0cH"/>
                         <outlet property="ticketButton" destination="LyC-IC-ztq" id="gdz-e6-qLe"/>
+                        <outlet property="ticketView" destination="4d3-LC-naF" id="Jfn-ar-Fb3"/>
+                        <outlet property="useInformManageButton" destination="hzH-00-54K" id="Yhw-sf-aEW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4fl-8x-1sb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
