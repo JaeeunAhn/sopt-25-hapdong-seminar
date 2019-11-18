@@ -13,8 +13,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+//        setNaviTitleView()
         setNavigationBarClear()
         setNaviBarGradient()
+    }
+    
+    private func setNaviTitleView() {
+        guard let titleImage = UIImage(named: "logo") else { return }
+        let titleImageView = UIImageView(image: titleImage)
+//        titleImageView.contentMode = .scaleAspectFill
+        self.navigationItem.titleView = titleImageView
     }
     
     private func setNaviBarGradient() {
@@ -26,7 +34,7 @@ class ViewController: UIViewController {
         gradient.frame = gradientFrame
         gradient.colors = [UIColor.white.cgColor, UIColor.white.withAlphaComponent(0).cgColor]
         gradient.startPoint = CGPoint(x: 0, y: 0)
-        gradient.endPoint = CGPoint(x: 0, y: 7)
+        gradient.endPoint = CGPoint(x: 0, y: 3)
         
         guard let image = getImageFrom(gradient) else { return }
         navigationBar.setBackgroundImage(image, for: .default)

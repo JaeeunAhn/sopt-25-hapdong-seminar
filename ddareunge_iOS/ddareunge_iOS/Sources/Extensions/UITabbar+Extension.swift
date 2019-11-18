@@ -12,7 +12,7 @@ extension UITabBar {
     override open func sizeThatFits(_ size: CGSize) -> CGSize {
         super.sizeThatFits(size)
         var sizeThatFits = super.sizeThatFits(size)
-        sizeThatFits.height = 96
+        sizeThatFits.height = 104
         return sizeThatFits
     }
 }
