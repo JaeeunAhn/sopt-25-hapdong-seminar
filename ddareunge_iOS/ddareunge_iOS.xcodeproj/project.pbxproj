@@ -12,6 +12,7 @@
 		9D8506D62382648500A5FB2A /* MySpaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8506D52382648500A5FB2A /* MySpaceViewController.swift */; };
 		9D8506DC2382ACD600A5FB2A /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8506DB2382ACD600A5FB2A /* CustomButton.swift */; };
 		9D8506DF2382B03F00A5FB2A /* CustomButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D8506DE2382B03F00A5FB2A /* CustomButton.xib */; };
+		9D896F0E2384EB29003C0BE6 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D896F0D2384EB29003C0BE6 /* UIButton+Extensions.swift */; };
 		A9AFB871FF7A175829E88E4D /* Pods_ddareunge_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5DB45485F83B4771D72B808 /* Pods_ddareunge_iOS.framework */; };
 		F42AA9DE237FDA50005B26B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42AA9DD237FDA50005B26B8 /* AppDelegate.swift */; };
 		F42AA9E0237FDA50005B26B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42AA9DF237FDA50005B26B8 /* SceneDelegate.swift */; };
@@ -33,6 +34,7 @@
 		9D8506D52382648500A5FB2A /* MySpaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySpaceViewController.swift; sourceTree = "<group>"; };
 		9D8506DB2382ACD600A5FB2A /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		9D8506DE2382B03F00A5FB2A /* CustomButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomButton.xib; sourceTree = "<group>"; };
+		9D896F0D2384EB29003C0BE6 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
 		C5DB45485F83B4771D72B808 /* Pods_ddareunge_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ddareunge_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F42AA9DA237FDA50005B26B8 /* ddareunge_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ddareunge_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F42AA9DD237FDA50005B26B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				F42AA9FC237FDBF5005B26B8 /* UIViewController+Extensions.swift */,
 				9D8506D12381B39D00A5FB2A /* UITabbar+Extension.swift */,
 				9D8506D323825E7500A5FB2A /* UINavigationBar+Extension.swift */,
+				9D896F0D2384EB29003C0BE6 /* UIButton+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F42AA9FB237FDBD2005B26B8 /* UIView+Extensions.swift in Sources */,
+				9D896F0E2384EB29003C0BE6 /* UIButton+Extensions.swift in Sources */,
 				9D8506D62382648500A5FB2A /* MySpaceViewController.swift in Sources */,
 				F42AA9F9237FDB7B005B26B8 /* UIImageView+Extensions.swift in Sources */,
 				F42AA9E2237FDA50005B26B8 /* ViewController.swift in Sources */,

@@ -9,6 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet var numberBCButtons: [UIButton]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,6 +17,7 @@ class ViewController: UIViewController {
         setNaviTitleView()
         setNavigationBarClear()
         setNaviBarGradient()
+        setBCButtons()
     }
     
     private func setNaviTitleView() {
@@ -48,6 +50,18 @@ class ViewController: UIViewController {
         gradientImage = UIGraphicsGetImageFromCurrentImageContext()?.resizableImage(withCapInsets: UIEdgeInsets.zero, resizingMode: .stretch)
         UIGraphicsEndImageContext()
         return gradientImage
+    }
+    
+    private func setBCButtons() {
+        for button in numberBCButtons {
+            button.layer.cornerRadius = button.frame.width / 2
+            button.setBackgroundColor(.aquaMarine, for: .normal)
+            button.setBackgroundColor(.gray, for: .highlighted)
+            button.clipsToBounds = true
+//            button.makeShadow()
+            button.alpha = 0.8
+            button.titleLabel?.textColor = .white
+        }
     }
 }
 

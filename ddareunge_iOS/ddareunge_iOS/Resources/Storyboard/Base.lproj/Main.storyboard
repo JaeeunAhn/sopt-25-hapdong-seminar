@@ -21,12 +21,47 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="content" translatesAutoresizingMaskIntoConstraints="NO" id="5dO-RE-qpq">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rwQ-jo-dVW">
+                                        <rect key="frame" x="118" y="306" width="66" height="66"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="66" id="Qzk-BK-LaT"/>
+                                            <constraint firstAttribute="width" constant="66" id="iA1-OZ-9Bh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <state key="normal" title="7+"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O5F-nb-cER">
+                                        <rect key="frame" x="267" y="333" width="66" height="66"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="66" id="69B-h7-XIA"/>
+                                            <constraint firstAttribute="height" constant="66" id="8OY-eg-mhg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <state key="normal" title="2">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJj-k2-ava">
+                                        <rect key="frame" x="84" y="516" width="66" height="66"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="66" id="GNF-At-khC"/>
+                                            <constraint firstAttribute="width" constant="66" id="YnM-qd-gCW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <state key="normal" title="0"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstItem="5dO-RE-qpq" firstAttribute="leading" secondItem="fqt-4w-HuT" secondAttribute="leading" id="76F-J6-s9g"/>
+                                    <constraint firstAttribute="trailing" secondItem="O5F-nb-cER" secondAttribute="trailing" constant="81" id="7f8-5V-550"/>
                                     <constraint firstItem="5dO-RE-qpq" firstAttribute="top" secondItem="fqt-4w-HuT" secondAttribute="top" id="8kb-Lq-t0u"/>
+                                    <constraint firstItem="AJj-k2-ava" firstAttribute="top" secondItem="rwQ-jo-dVW" secondAttribute="bottom" constant="144" id="HYV-DW-xfe"/>
+                                    <constraint firstItem="rwQ-jo-dVW" firstAttribute="leading" secondItem="fqt-4w-HuT" secondAttribute="leading" constant="118" id="Nza-dl-stP"/>
+                                    <constraint firstItem="AJj-k2-ava" firstAttribute="leading" secondItem="fqt-4w-HuT" secondAttribute="leading" constant="84" id="Ugj-nN-6xa"/>
+                                    <constraint firstItem="rwQ-jo-dVW" firstAttribute="top" secondItem="fqt-4w-HuT" secondAttribute="top" constant="306" id="VKJ-hX-rT9"/>
                                     <constraint firstAttribute="bottom" secondItem="5dO-RE-qpq" secondAttribute="bottom" id="YPE-pb-rhc"/>
+                                    <constraint firstItem="O5F-nb-cER" firstAttribute="top" secondItem="fqt-4w-HuT" secondAttribute="top" constant="333" id="mtX-Ti-qdg"/>
                                     <constraint firstAttribute="trailing" secondItem="5dO-RE-qpq" secondAttribute="trailing" id="x5N-OY-onl"/>
                                 </constraints>
                             </view>
@@ -48,6 +83,11 @@
                             <color key="tintColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outletCollection property="numberBCButtons" destination="rwQ-jo-dVW" collectionClass="NSMutableArray" id="sb3-w0-VFS"/>
+                        <outletCollection property="numberBCButtons" destination="O5F-nb-cER" collectionClass="NSMutableArray" id="ky1-Fb-sM2"/>
+                        <outletCollection property="numberBCButtons" destination="AJj-k2-ava" collectionClass="NSMutableArray" id="gyL-YZ-sxb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
