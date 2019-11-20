@@ -70,5 +70,8 @@ class MySpaceViewController: UIViewController {
     }
     
     @IBAction func backScreen(_ sender: Any) {
+        guard let tabbarController = self.tabBarController as? TabbarController else { return }
+        tabbarController.addCenterButton()
+        tabbarController.selectedIndex = TabbarViewType.home.rawValue
     }
 }

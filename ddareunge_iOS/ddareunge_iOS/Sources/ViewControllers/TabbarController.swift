@@ -15,6 +15,7 @@ class TabbarController: UITabBarController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setLocationOfTabItems()
+        self.delegate = self
     }
     
     override func viewSafeAreaInsetsDidChange() {
@@ -37,11 +38,39 @@ class TabbarController: UITabBarController {
         centerButton.setBackgroundImage(buttonImage, for: .normal)
         centerButton.backgroundColor = .clear
         self.centerButton = centerButton
-        view.addSubview(centerButton)
         centerButton.addTarget(self, action: #selector(centerButtonAction(sender:)), for: .touchUpInside)
+        addCenterButton()
     }
     
+    // Center Button 클릭 시 동작
     @objc func centerButtonAction(sender: UIButton) {
+    }
+    
+    func addCenterButton() {
+        guard let centerButton = self.centerButton else { return }
+        self.view.addSubview(centerButton)
+    }
+}
+
+extension TabbarController: UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        guard let controllers = tabBarController.viewControllers else { return }
         
+        switch viewController {
+        case controllers[TabbarViewType.mySpace.rawValue]: centerButton?.removeFromSuperview()
+            viewController.tabBarController?.tabBar.isHidden = true
+        default:
+            if !isExistCenterButton() {
+                guard let centerButton = self.centerButton else { return }
+                self.view.addSubview(centerButton)
+            }
+        }
+    }
+    
+    private func isExistCenterButton() -> Bool {
+        for view in view.subviews {
+            if view == centerButton { return true }
+        }
+        return false
     }
 }

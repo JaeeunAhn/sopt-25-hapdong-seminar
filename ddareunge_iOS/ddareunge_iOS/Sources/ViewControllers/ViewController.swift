@@ -17,12 +17,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        print("Hi I'm Load")
         setNaviTitleView()
         setNavigationBarClear()
         setNaviBarGradient()
         setBCButtons()
         setTrackingButton()
         setLocationLabel()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
     }
     
     private func setNaviTitleView() {
