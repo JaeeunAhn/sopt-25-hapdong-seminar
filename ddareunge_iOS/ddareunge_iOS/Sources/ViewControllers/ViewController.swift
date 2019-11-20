@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet var numberBCButtons: [UIButton]!
+    @IBOutlet weak var trackingButton: UIButton!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var locationLabelImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +21,8 @@ class ViewController: UIViewController {
         setNavigationBarClear()
         setNaviBarGradient()
         setBCButtons()
+        setTrackingButton()
+        setLocationLabel()
     }
     
     private func setNaviTitleView() {
@@ -58,10 +63,23 @@ class ViewController: UIViewController {
             button.setBackgroundColor(.aquaMarine, for: .normal)
             button.setBackgroundColor(.gray, for: .highlighted)
             button.clipsToBounds = true
-//            button.makeShadow()
-            button.alpha = 0.8
+            button.alpha = 0.7
+            button.makeShadow()
             button.titleLabel?.textColor = .white
         }
+    }
+    
+    private func setTrackingButton() {
+        guard let image = UIImage(named: "btnFloating") else { return }
+        trackingButton.setImage(image, for: .normal)
+        trackingButton.backgroundColor = .white
+        trackingButton.layer.cornerRadius = trackingButton.frame.width / 2
+        trackingButton.makeShadow()
+    }
+    
+    private func setLocationLabel() {
+        locationLabel.makeShadow()
+        locationLabelImage.makeShadow()
     }
 }
 
