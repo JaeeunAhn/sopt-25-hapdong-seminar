@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var trackingButton: UIButton!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var locationLabelImage: UIImageView!
+    @IBOutlet weak var searchBarView: UIView!
+    @IBOutlet weak var dropdownButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +26,7 @@ class ViewController: UIViewController {
         setBCButtons()
         setTrackingButton()
         setLocationLabel()
+        setSearchBarView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -85,6 +88,12 @@ class ViewController: UIViewController {
     private func setLocationLabel() {
         locationLabel.makeShadow()
         locationLabelImage.makeShadow()
+    }
+    
+    private func setSearchBarView() {
+        searchBarView.makeShadow()
+        searchBarView.layer.cornerRadius = 10
+        dropdownButton.setTitleColor(.blue, for: .highlighted)
     }
 }
 
