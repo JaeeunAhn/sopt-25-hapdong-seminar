@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var locationLabelImage: UIImageView!
     @IBOutlet weak var searchBarView: UIView!
-    @IBOutlet weak var dropdownButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -93,7 +92,7 @@ class ViewController: UIViewController {
     private func setSearchBarView() {
         searchBarView.makeShadow()
         searchBarView.layer.cornerRadius = 10
-        dropdownButton.setTitleColor(.blue, for: .highlighted)
+//        dropdownButton.setTitleColor(.blue, for: .highlighted)
     }
 }
 
