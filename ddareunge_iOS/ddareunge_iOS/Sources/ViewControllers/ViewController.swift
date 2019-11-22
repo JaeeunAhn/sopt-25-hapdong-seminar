@@ -14,11 +14,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var locationLabelImage: UIImageView!
     @IBOutlet weak var searchBarView: UIView!
+    @IBOutlet var dropMenuButtons: [UIButton]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        print("Hi I'm Load")
         setNaviTitleView()
         setNavigationBarClear()
         setNaviBarGradient()
@@ -26,10 +26,27 @@ class ViewController: UIViewController {
         setTrackingButton()
         setLocationLabel()
         setSearchBarView()
+        addObservers()
+        dropMenuButtons.forEach { button in
+            button.isHidden = true
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = false
+    }
+    
+    private func addObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(showDropDownMenu), name: .clickDropDownButton, object: nil)
+    }
+    
+    @objc func showDropDownMenu() {
+        dropMenuButtons.forEach { button in
+            UIView.animate(withDuration: 0.3) {
+                button.isHidden = !button.isHidden
+                self.view.layoutIfNeeded()
+            }
+        }
     }
     
     private func setNaviTitleView() {
@@ -92,7 +109,12 @@ class ViewController: UIViewController {
     private func setSearchBarView() {
         searchBarView.makeShadow()
         searchBarView.layer.cornerRadius = 10
-//        dropdownButton.setTitleColor(.blue, for: .highlighted)
     }
 }
 
+
+extension ViewController {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+}

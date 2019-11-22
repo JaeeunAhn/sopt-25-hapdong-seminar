@@ -62,13 +62,13 @@
                                         </constraints>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="790" translatesAutoresizingMaskIntoConstraints="NO" id="Xxj-8u-rbn">
-                                        <rect key="frame" x="166" y="407" width="82" height="82"/>
+                                        <rect key="frame" x="186.5" y="427.5" width="41" height="41"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="rYP-PS-rXn">
-                                        <rect key="frame" x="161" y="476.5" width="92" height="25"/>
+                                        <rect key="frame" x="184" y="456" width="46" height="25"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내 위치" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rxw-Wx-dAL">
-                                        <rect key="frame" x="181" y="487.5" width="52" height="26"/>
+                                        <rect key="frame" x="181" y="467" width="52" height="26"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="7Sd-mH-7dt"/>
@@ -91,24 +91,64 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WCT-mU-Ma9" customClass="DropDownButton" customModule="ddareunge_iOS" customModuleProvider="target">
                                                 <rect key="frame" x="18" y="17" width="75" height="16"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="16" id="obW-J6-Ohr"/>
-                                                </constraints>
                                             </view>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="원하시는 지역이 어디신가요?" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Zrv-a6-DE6">
                                                 <rect key="frame" x="124" y="15.5" width="260" height="19"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="X4W-l5-uzq">
+                                                <rect key="frame" x="18" y="33" width="75" height="64"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HnA-kS-yBe">
+                                                        <rect key="frame" x="0.0" y="0.0" width="75" height="16"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <state key="normal" title="자전거번호">
+                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p9m-uK-Ssf">
+                                                        <rect key="frame" x="0.0" y="16" width="75" height="16"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <state key="normal" title="기타">
+                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mEO-XA-NpS">
+                                                        <rect key="frame" x="0.0" y="32" width="75" height="16"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <state key="normal" title="등">
+                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o2b-0Q-9rk">
+                                                        <rect key="frame" x="0.0" y="48" width="75" height="16"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <state key="normal" title="등">
+                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="p9m-uK-Ssf" firstAttribute="height" secondItem="HnA-kS-yBe" secondAttribute="height" id="74A-Li-HzK"/>
+                                                    <constraint firstItem="mEO-XA-NpS" firstAttribute="height" secondItem="HnA-kS-yBe" secondAttribute="height" id="aXt-Xo-jXl"/>
+                                                    <constraint firstItem="o2b-0Q-9rk" firstAttribute="height" secondItem="HnA-kS-yBe" secondAttribute="height" id="syY-ce-NN0"/>
+                                                </constraints>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="Zrv-a6-DE6" secondAttribute="trailing" id="3VP-yI-pWt"/>
+                                            <constraint firstItem="WCT-mU-Ma9" firstAttribute="height" secondItem="ZLR-0m-Ao7" secondAttribute="height" multiplier="0.32" id="72m-Pb-mPS"/>
                                             <constraint firstItem="R0R-pb-krP" firstAttribute="centerY" secondItem="WCT-mU-Ma9" secondAttribute="centerY" id="BWj-j3-9zZ"/>
                                             <constraint firstItem="WCT-mU-Ma9" firstAttribute="leading" secondItem="ZLR-0m-Ao7" secondAttribute="leading" constant="18" id="HTJ-9n-Zdk"/>
+                                            <constraint firstItem="X4W-l5-uzq" firstAttribute="width" secondItem="WCT-mU-Ma9" secondAttribute="width" id="I9H-Wj-8SI"/>
                                             <constraint firstItem="WCT-mU-Ma9" firstAttribute="centerY" secondItem="ZLR-0m-Ao7" secondAttribute="centerY" id="JH6-oM-WPf"/>
                                             <constraint firstItem="R0R-pb-krP" firstAttribute="height" secondItem="ZLR-0m-Ao7" secondAttribute="height" multiplier="0.48" id="NEi-ok-YPZ"/>
+                                            <constraint firstItem="X4W-l5-uzq" firstAttribute="top" secondItem="WCT-mU-Ma9" secondAttribute="bottom" id="TYR-Es-boz"/>
                                             <constraint firstItem="WCT-mU-Ma9" firstAttribute="width" secondItem="ZLR-0m-Ao7" secondAttribute="width" multiplier="0.195312" id="Y46-i9-Boz"/>
+                                            <constraint firstItem="X4W-l5-uzq" firstAttribute="leading" secondItem="WCT-mU-Ma9" secondAttribute="leading" id="aJg-vK-XCv"/>
+                                            <constraint firstItem="HnA-kS-yBe" firstAttribute="height" secondItem="WCT-mU-Ma9" secondAttribute="height" id="gSx-g7-pnU"/>
                                             <constraint firstItem="Zrv-a6-DE6" firstAttribute="leading" secondItem="R0R-pb-krP" secondAttribute="trailing" constant="20" id="h6Q-4N-Wfe"/>
                                             <constraint firstItem="R0R-pb-krP" firstAttribute="leading" secondItem="WCT-mU-Ma9" secondAttribute="trailing" constant="10" id="ua8-KB-qwc"/>
                                             <constraint firstItem="Zrv-a6-DE6" firstAttribute="centerY" secondItem="ZLR-0m-Ao7" secondAttribute="centerY" id="v2r-Rj-mR7"/>
@@ -169,6 +209,10 @@
                         <outletCollection property="numberBCButtons" destination="rwQ-jo-dVW" collectionClass="NSMutableArray" id="sb3-w0-VFS"/>
                         <outletCollection property="numberBCButtons" destination="O5F-nb-cER" collectionClass="NSMutableArray" id="ky1-Fb-sM2"/>
                         <outletCollection property="numberBCButtons" destination="AJj-k2-ava" collectionClass="NSMutableArray" id="gyL-YZ-sxb"/>
+                        <outletCollection property="dropMenuButtons" destination="HnA-kS-yBe" collectionClass="NSMutableArray" id="mym-W8-jPd"/>
+                        <outletCollection property="dropMenuButtons" destination="p9m-uK-Ssf" collectionClass="NSMutableArray" id="Jba-e9-L6X"/>
+                        <outletCollection property="dropMenuButtons" destination="mEO-XA-NpS" collectionClass="NSMutableArray" id="eJI-0G-ybV"/>
+                        <outletCollection property="dropMenuButtons" destination="o2b-0Q-9rk" collectionClass="NSMutableArray" id="nGC-DC-vxY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

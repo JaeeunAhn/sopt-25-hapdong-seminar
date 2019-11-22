@@ -38,5 +38,6 @@ extension DropDownButton {
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         categoryLabel.textColor = .black
+        NotificationCenter.default.post(name: .clickDropDownButton, object: nil)
     }
 }
